@@ -13,6 +13,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+ /* As rotas definem que recurso será carregado 
+ quando uma URL for digitad. pode carregar
+ um Controller ou uma View.Quando uma URL
+ precissar carregar dados do BD a rota deve 
+ carregar um CONTROLLER */
 Route::get('/', function () {
-    return view('welcome');
+    // return view('welcome');
+    echo '<h1>Hello World!!</h1>';
 });

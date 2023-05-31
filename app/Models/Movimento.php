@@ -8,4 +8,6 @@ use Illuminate\Database\Eloquent\Model;
 class movimento extends Model
 {
     use HasFactory;
+    //Inserir aqui o relacionemento entre tabelas
+    
 }
