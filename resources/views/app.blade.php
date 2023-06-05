@@ -12,11 +12,16 @@
     <main>
 
         <div class="md:columns-2">
-            <div>Navegação</div>
-            <div>Extrato</div>
+            <div class="p-5 bg-sky-300 h-full">
+                Navegação
+            </div>
+
+            <div class="">
+                @yield('conteudo')
+            </div>
         </div>
         
-        @yield('conteudo')
+        
 
     </main>
 
