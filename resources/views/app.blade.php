@@ -11,7 +11,7 @@
     
     <main>
 
-        <div class="md:columns-2">
+        <div class="grid grid-cols-2 gap-4">
             <div class="p-5 bg-sky-300 h-full">
                 Navegação
             </div>
