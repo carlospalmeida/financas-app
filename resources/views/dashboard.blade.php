@@ -5,7 +5,7 @@
     EXTRATO - SALDO R$ 9.999,00
 </h1>
 
-<div class="md:columns-2 divide-x divide-solid divide-green-900">
+<div class="md:grid grid-cols-2">
     <!-- Receitas -->
     <div class="p-3">
         <h2 class="text-2xl">Receitas</h2>
@@ -66,6 +66,5 @@
             </p>
         </div>
     </div>
-</div>
 </div>
 @endsection

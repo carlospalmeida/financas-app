@@ -13,14 +13,17 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
- /* As rotas definem que recurso será carregado 
+/* As rotas definem que recurso será carregado 
  quando uma URL for digitad. pode carregar
  um Controller ou uma View.Quando uma URL
  precissar carregar dados do BD a rota deve 
  carregar um CONTROLLER */
+
 Route::get('/', function () {
     return view('auth.login');
 });
+
+
 
 Route::middleware([
     'auth:sanctum',
@@ -30,4 +33,12 @@ Route::middleware([
     Route::get('/dashboard', function () {
         return view('dashboard');
     })->name('dashboard');
+
+    Route::get('/nova_entrada', function () {
+        return view('nova_entrada');
+    })->name('nova_entrada');
+
+    Route::post('/store', function(){
+        echo 'gravou';
+    })->name('store');
 });

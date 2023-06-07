@@ -8,6 +8,9 @@ use Illuminate\Database\Eloquent\Model;
 class movimento extends Model
 {
     use HasFactory;
-    //Inserir aqui o relacionemento entre tabelas
-    
+    //relacionemento entre tabelas
+    public function user()
+    {
+        return $this->belongsTo('App\Models\User');
+    }
 }
