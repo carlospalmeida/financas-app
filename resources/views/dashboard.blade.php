@@ -10,6 +10,7 @@
     <div class="p-3">
         <h2 class="text-2xl">Receitas</h2>
 
+        @foreach($receitas as $receita)
         <div class="p-3 rounded-md bg-neutral-50 shadow-md">
             <p>05/06/2023</p>
             <p>
@@ -35,11 +36,14 @@
 
             </p>
         </div>
+        @endforeach
+
     </div>
 
     <!-- Despesas -->
     <div class="p-3">
         <h2 class="text-2xl">Despesas</h2>
+        @foreach($despesas as $despesa)
         <div class="p-3 rounded-md bg-neutral-50 shadow-md">
             <p>05/06/2023</p>
             <p>
@@ -65,6 +69,7 @@
 
             </p>
         </div>
+        @endforeach
     </div>
 </div>
 @endsection
