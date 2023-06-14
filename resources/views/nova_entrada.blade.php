@@ -7,7 +7,7 @@
     </h2>
     <form id="frm-nova-entrada" method="post" action="{{route('store')}}">
         @csrf
-        <label for="descricao">Descrição:</label> <br>,
+        <label for="descricao">Descrição:</label> <br>
         <textarea class="border" name="descricao" id="descricao" cols="60" rows="5" required></textarea>
         <p>Tipo:</p>
         <input type="radio" name="tipo" value="Receita" required> Receita

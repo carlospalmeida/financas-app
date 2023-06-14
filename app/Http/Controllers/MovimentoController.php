@@ -54,4 +54,12 @@ class MovimentoController extends Controller
 
     }
 
+    //UPDATE - carrega os dados
+    public function form_update($id){
+        $dado = Movimento::findOrFail($id);
+        return view('form_update', ['dado' => $dado]);
+
+    }
+
+
 }

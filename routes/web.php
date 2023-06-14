@@ -39,6 +39,9 @@ Route::middleware([
     })->name('nova_entrada');
 
     Route::post('/store',[MovimentoController::class, 'store'])->name('store');
+    
+    //parametros de rota se indentifica com {}
+    Route::get('/form_update/{id}',[MovimentoController::class, 'form_update'])->name('form_update');
 
     
 });
