@@ -61,5 +61,12 @@ class MovimentoController extends Controller
 
     }
 
+    //U DO CRUD - Atualiza dados
+    //pegar dados de um formulario Request $Nome da variavel
+    public function update(Request $request){
+        Movimento::findOrFail($request->id)->update($request->all());
+        return redirect('dashboard');
+        
+    }
 
 }

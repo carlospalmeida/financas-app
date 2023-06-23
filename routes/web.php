@@ -43,5 +43,7 @@ Route::middleware([
     //parametros de rota se indentifica com {}
     Route::get('/form_update/{id}',[MovimentoController::class, 'form_update'])->name('form_update');
 
+    //Rota update
+    Route::put('/update',[MovimentoController::class, 'update'])->name('update');
     
 });

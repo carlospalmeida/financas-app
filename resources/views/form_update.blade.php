@@ -5,8 +5,10 @@
     <h2 class="text-lg text-bold">
         Editar Movimento
     </h2>
-    <form id="frm-editar" method="post" action="">
+    <form id="frm-editar" method="post" action="{{route('update')}}">
         @csrf
+        @method('PUT')
+        <input type="hidden" name="id" value="{{$dado->id}}"> 
         <label for="descricao">Descrição:</label> <br>
         <textarea class="border" name="descricao" id="descricao" cols="60" rows="5" required>
             {{$dado->descricao}}
