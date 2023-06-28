@@ -26,8 +26,9 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('movimentos', function (Blueprint $table) {
+        Schema::dropIfExists('movimentos', function (Blueprint $table){
             $table->foreignId('user_id')->constrained()->onDelete('cascade');
         });
+        
     }
 };

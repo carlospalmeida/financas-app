@@ -8,25 +8,26 @@
     <form id="frm-editar" method="post" action="{{route('update')}}">
         @csrf
         @method('PUT')
-        <input type="hidden" name="id" value="{{$dado->id}}"> 
-        <label for="descricao">Descrição:</label> <br>
+        <input type="hidden" name="id" value="{{$dado->id}}">
+
+        <label for="descricao">Descrição</label><br>
         <textarea class="border" name="descricao" id="descricao" cols="60" rows="5" required>
             {{$dado->descricao}}
-        </textarea>  
-        <p>Tipo:</p>
+        </textarea>
+        <p class="mt-5">Tipo:</p>
         <input type="radio" name="tipo" value="Receita" required 
-        @if($dado->tipo == 'Receita') checked @endif> Receita
-        <input class="ms-5" type="radio" name="tipo" value="Despesas" required 
-        @if($dado->tipo == 'Despesas') checked @endif> Despesa
+        @if($dado->tipo == 'Receita') checked @endif > Receita
+        <input class="ms-5" type="radio" name="tipo" value="Despesa" required
+        @if($dado->tipo == 'Despesa') checked @endif> Despesa
 
         <p class="mt-5">
-            <label for="valor">Valor:</label> <br>
-            <input class="border" type="number" name="valor" step="0.01" required
+            <label for="valor">Valor:</label><br>
+            <input type="number" class="border" name="valor" step="0.01" required 
             value="{{$dado->valor}}">
         </p>
 
         <p class="mt-5">
-            <input class="border rounded-lg p-3 bg-sky-300" type="submit" value="Atualizar">
+            <input type="submit" class="border rounded-lg p-3 bg-teal-200" value="Atualizar">
         </p>
 
     </form>

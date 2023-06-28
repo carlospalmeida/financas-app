@@ -61,6 +61,6 @@ class User extends Authenticatable
 
     public function movimentos()
     {
-        return $this->hasMany('App\Models\movimento');
+        return $this->hasMany('App\Models\Movimento');
     }
 }
